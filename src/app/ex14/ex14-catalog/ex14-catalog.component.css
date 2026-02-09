@@ -1,0 +1,48 @@
+:host {
+  display: block;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.catalog-container {
+  border: 1px solid #000;
+  background-color: #fff;
+  padding: 15px;
+}
+
+.category-section {
+  margin-bottom: 20px;
+}
+
+.category-section:last-child {
+  margin-bottom: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+
+table:last-child {
+  margin-bottom: 0;
+}
+
+th,
+td {
+  border: 1px solid #000;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  width: 60px;
+  height: auto;
+}

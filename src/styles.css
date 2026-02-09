@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-pattern: radial-gradient(circle, #000 1px, transparent 1px);
+  --bg-size: 8px 8px;
+  --border-thick: 3px;
+  --border-color: #000;
+  --shadow-offset: 4px;
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+}
+
+body {
+  font-family: var(--font-display);
+  background-color: #f5f5f5;
+  background-image: var(--bg-pattern);
+  background-size: var(--bg-size);
+  color: #000;
+  line-height: 1.5;
+}
+
+/* Retro Card Style */
+.retro-card {
+  background: #fff;
+  border: var(--border-thick) solid var(--border-color);
+  box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--border-color);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.retro-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--border-color);
+}
+
+/* Retro Button Style */
+.retro-btn {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 13px;
+  padding: 10px 20px;
+  background: #fff;
+  color: #000;
+  border: var(--border-thick) solid var(--border-color);
+  box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--border-color);
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.1s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.retro-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--border-color);
+}
+
+.retro-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0 0 0 var(--border-color);
+}
+
+.retro-btn-primary {
+  background: #000;
+  color: #fff;
+}
+
+.retro-btn-primary:hover {
+  background: #333;
+}
+
+.retro-btn-danger {
+  background: #fff;
+  color: #000;
+  border-color: #000;
+}
+
+.retro-btn-danger:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* Window Title Bar */
+.window-titlebar {
+  background: #000;
+  color: #fff;
+  padding: 8px 12px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.window-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.window-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background: transparent;
+}
+
+/* Retro Input Style */
+.retro-input {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  padding: 10px 14px;
+  border: var(--border-thick) solid var(--border-color);
+  background: #fff;
+  outline: none;
+  transition: box-shadow 0.15s ease;
+}
+
+.retro-input:focus {
+  box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--border-color);
+}
+
+/* Retro Table Style */
+.retro-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: var(--border-thick) solid var(--border-color);
+  background: #fff;
+}
+
+.retro-table th {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  text-align: left;
+  padding: 12px 15px;
+  background: #000;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+  border-bottom: var(--border-thick) solid var(--border-color);
+}
+
+.retro-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.retro-table tr:hover td {
+  background: #f9f9f9;
+}
+
+/* Retro Link Style */
+.retro-link {
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 2px solid #000;
+  transition: all 0.15s ease;
+}
+
+.retro-link:hover {
+  background: #000;
+  color: #fff;
+  padding: 2px 4px;
+  margin: -2px -4px;
+}
+
+/* Section Title */
+.section-title {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #000;
+}
+
+/* Container */
+.retro-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+/* Form Group */
+.retro-form-group {
+  margin-bottom: 20px;
+}
+
+.retro-form-group label {
+  display: block;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+/* Loading Animation */
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.retro-loading {
+  font-family: var(--font-mono);
+  font-size: 14px;
+}
+
+.retro-loading::after {
+  content: '_';
+  animation: blink 1s infinite;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f5f5;
+  border: 2px solid #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #000;
+  border: 2px solid #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}
+

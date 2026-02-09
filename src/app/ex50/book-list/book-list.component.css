@@ -1,0 +1,161 @@
+.container {
+  padding: 30px;
+  font-family: var(--font-display);
+}
+
+h1 {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #000;
+  letter-spacing: -1px;
+}
+
+.actions {
+  margin-bottom: 25px;
+}
+
+.btn-create {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 13px;
+  color: #000;
+  text-decoration: none;
+  border-bottom: 2px solid #000;
+  padding-bottom: 2px;
+  transition: all 0.15s ease;
+}
+
+.btn-create:hover {
+  background: #000;
+  color: #fff;
+  padding: 4px 8px;
+  margin: -4px -8px;
+  border-bottom: none;
+}
+
+.loading {
+  font-family: var(--font-mono);
+  text-align: center;
+  padding: 40px;
+  font-size: 14px;
+}
+
+.loading::after {
+  content: '_';
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.book-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 3px solid #000;
+  background: #fff;
+  box-shadow: 4px 4px 0 #000;
+}
+
+.book-table th {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  text-align: left;
+  padding: 14px 16px;
+  background: #000;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 1px;
+  border-bottom: 3px solid #000;
+}
+
+.book-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 13px;
+  vertical-align: top;
+}
+
+.book-table tr:hover td {
+  background: #f9f9f9;
+}
+
+.book-table tr:last-child td {
+  border-bottom: none;
+}
+
+.book-name {
+  font-weight: 600;
+  max-width: 120px;
+}
+
+.price {
+  font-family: var(--font-mono);
+  text-align: right;
+  white-space: nowrap;
+}
+
+.description {
+  max-width: 350px;
+  line-height: 1.5;
+  font-size: 12px;
+  color: #333;
+}
+
+.image {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: #666;
+}
+
+.date {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.quantity {
+  font-family: var(--font-mono);
+  text-align: center;
+}
+
+.code {
+  font-family: var(--font-mono);
+  text-align: center;
+}
+
+.actions-cell {
+  text-align: center;
+  white-space: nowrap;
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+
+.link-edit,
+.link-details,
+.link-delete {
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.15s ease;
+}
+
+.link-edit:hover,
+.link-details:hover {
+  background: #000;
+  color: #fff;
+  padding: 2px 4px;
+  margin: -2px -4px;
+}
+
+.link-delete:hover {
+  background: #000;
+  color: #fff;
+  padding: 2px 4px;
+  margin: -2px -4px;
+}

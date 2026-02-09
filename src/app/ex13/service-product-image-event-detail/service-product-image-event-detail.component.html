@@ -1,0 +1,33 @@
+<div class="container">
+  <h2>Product Detail</h2>
+  
+  <div *ngIf="product; else notFound">
+    <table>
+      <tbody>
+        <tr>
+          <th>Image</th>
+          <td><img [src]="product.Image" [alt]="product.ProductName" class="product-image-detail"></td>
+        </tr>
+        <tr>
+          <th>Product ID</th>
+          <td>{{ product.ProductId }}</td>
+        </tr>
+        <tr>
+          <th>Product Name</th>
+          <td>{{ product.ProductName }}</td>
+        </tr>
+        <tr>
+          <th>Price</th>
+          <td>{{ product.Price }}</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <button (click)="goBack()">Go Back</button>
+  </div>
+  
+  <ng-template #notFound>
+    <p>Product not found.</p>
+    <button (click)="goBack()">Go Back</button>
+  </ng-template>
+</div>

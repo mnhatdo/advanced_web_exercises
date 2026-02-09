@@ -1,0 +1,52 @@
+.container {
+  background-color: white;
+  color: black;
+  padding: 20px;
+}
+
+h2 {
+  color: black;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  width: 150px;
+}
+
+.product-image-detail {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+
+button {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  padding: 8px 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #f0f0f0;
+}
+
+p {
+  color: black;
+}

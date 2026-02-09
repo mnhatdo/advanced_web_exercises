@@ -1,0 +1,32 @@
+<div class="container">
+  <div *ngIf="loading" class="message">Loading customer data...</div>
+  <div *ngIf="error" class="message error">{{ error }}</div>
+  
+  <table *ngIf="!loading && !error && customerGroups.length > 0">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Age</th>
+        <th>#</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let group of customerGroups">
+        <tr class="group-header">
+          <td colspan="5">{{ group.CustomerTypeId }} - {{ group.CustomterTypeName }}</td>
+        </tr>
+        <tr *ngFor="let customer of group.Customers">
+          <td>{{ customer.Id }}</td>
+          <td>{{ customer.Name }}</td>
+          <td>{{ customer.Email }}</td>
+          <td>{{ customer.Age }}</td>
+          <td>
+            <img [src]="customer.Image" [alt]="customer.Name" class="avatar">
+          </td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+</div>

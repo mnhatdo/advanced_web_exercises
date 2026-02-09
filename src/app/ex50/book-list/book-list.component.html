@@ -1,0 +1,47 @@
+<div class="container">
+  <h1>QUẢN LÝ THÔNG TIN SÁCH</h1>
+  
+  <div class="actions">
+    <a routerLink="/ex50/books/create" class="btn-create">Create New</a>
+  </div>
+
+  @if (loading) {
+    <div class="loading">Đang tải dữ liệu...</div>
+  } @else {
+    <table class="book-table">
+      <thead>
+        <tr>
+          <th>Tensach</th>
+          <th>Giaban</th>
+          <th>Mota</th>
+          <th>Anhbia</th>
+          <th>Ngaycapnhat</th>
+          <th>Soluongton</th>
+          <th>MaCD</th>
+          <th>MaNXB</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (book of books; track book.id) {
+          <tr>
+            <td class="book-name">{{ book.tensach }}</td>
+            <td class="price">{{ formatPrice(book.giaban) }}</td>
+            <td class="description">{{ book.mota }}</td>
+            <td class="image">{{ book.anhbia }}</td>
+            <td class="date">{{ formatDate(book.ngaycapnhat) }}</td>
+            <td class="quantity">{{ book.soluongton }}</td>
+            <td class="code">{{ book.macd }}</td>
+            <td class="code">{{ book.manxb }}</td>
+            <td class="actions-cell">
+              <a [routerLink]="['/ex50/books/edit', book.id]" class="link-edit">Edit</a> |
+              <a [routerLink]="['/ex50/books/details', book.id]" class="link-details">Details</a>
+              <br>|<br>
+              <a href="javascript:void(0)" (click)="deleteBook(book.id, book.tensach)" class="link-delete">Delete</a>
+            </td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  }
+</div>

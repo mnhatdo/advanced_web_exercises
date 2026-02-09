@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "tensach": "Giáo trình Tin học cơ bản",
+    "giaban": 26000.00,
+    "mota": "Nội dung của cuốn: Tin Học Cơ Bản Windows XP gồm có 7 chương: Chương 1: Một số vấn đề cơ bản. Chương 2: Sử dụng nhanh thanh công cụ và thanh thực đơn trong My Computer và Windows Explorer. Chương 3: Các thao tác trong windows XP. Chương 4: Các thiết lập trong Windows XP. Chương 5: Bảo trì máy tính. Chương 6: Các phím tắt. Chương 7: Hỏi và đáp các thắc mắc. Xin trân trọng giới thiệu cuốn sách cùng bạn",
+    "anhbia": "THCB.jpg",
+    "ngaycapnhat": "2014-10-25T12:00:00",
+    "soluongton": 120,
+    "macd": 7,
+    "manxb": 1
+  },
+  {
+    "id": 2,
+    "tensach": "Giáo trình Cơ Sở Dữ Liệu Với Visual Basic 2005 Và ADO.NET 2.0",
+    "giaban": 12000.00,
+    "mota": "Cuốn sách này gồm 3 phần sau: Phần 1: Xử lý văn bản trong Microsoft thiểu các nội dung sau: Chương 1: Căn bản về cơ sở dữ liệu. Chương 2: Các bộ kết nối và tương tác dữ liệu. Chương 3: Bộ chứa dữ liệu DataSet. Chương 4: Bộ điều hợp dữ liệu DataAdapter. Chương 5: Sử dụng các điều khiển ràng buộc dữ liệu. Chương 6: Tạo báo cáo với Crystal Report. Chương 7: ADO.NET và XML. Xin trân trọng giới thiệu cùng các bạn.",
+    "anhbia": "TH004.jpg",
+    "ngaycapnhat": "2013-10-23T12:00:00",
+    "soluongton": 25,
+    "macd": 3,
+    "manxb": 2
+  },
+  {
+    "id": 3,
+    "tensach": "Visual Basic 2005 Tập 3, Quyển 2: Lập Trình Web",
+    "giaban": 20000.00,
+    "mota": "\"Visual Basic 2005 Tập 3, Quyển 2: Lập Trình Web Với Cơ Sở Dữ Liệu\" sẽ cung cấp kỹ thuật và hướng dẫn bạn: Tự học xây dựng ứng dụng Web quản lý CSDL toàn diện với ADO.NET 2.0 và ASP.NET. Khai thác các đối tượng và nguồn dữ liệu dành cho WebForm. Sử dụng các điều khiển dữ liệu đặc thù dành riêng cho ASP.NET và Web. Làm quen với những khái niệm xử lý dữ liệu hoàn toàn mới. Ràng buộc dữ liệu với các thành phần giao diện Web Forms. Thiết kế ứng dụng Web \"Quản lý CD Shop\" trực quan và thực tế. Cung cấp một kiến thức hoàn chỉnh về Web cho các bạn yêu thích ngôn ngữ Visual Basic và .NET Framework. Sách có kèm theo CD-ROM bài tập.",
+    "anhbia": "LTWeb2005.jpg",
+    "ngaycapnhat": "2014-09-15T12:00:00",
+    "soluongton": 240,
+    "macd": 8,
+    "manxb": 4
+  },
+  {
+    "id": 4,
+    "tensach": "Lập trình C# căn bản",
+    "giaban": 35000.00,
+    "mota": "Cuốn sách giới thiệu ngôn ngữ lập trình C# từ cơ bản đến nâng cao. Bao gồm các chương: Chương 1: Giới thiệu về C# và .NET. Chương 2: Cú pháp cơ bản. Chương 3: Lập trình hướng đối tượng. Chương 4: Xử lý ngoại lệ. Chương 5: Làm việc với file. Chương 6: LINQ và Collections.",
+    "anhbia": "csharp.jpg",
+    "ngaycapnhat": "2015-03-20T12:00:00",
+    "soluongton": 85,
+    "macd": 5,
+    "manxb": 3
+  },
+  {
+    "id": 5,
+    "tensach": "Angular Framework toàn tập",
+    "giaban": 45000.00,
+    "mota": "Hướng dẫn từng bước xây dựng ứng dụng web với Angular. Nội dung bao gồm: Components, Services, Routing, Forms, HTTP Client, RxJS và nhiều chủ đề nâng cao khác.",
+    "anhbia": "angular.jpg",
+    "ngaycapnhat": "2023-06-15T12:00:00",
+    "soluongton": 150,
+    "macd": 10,
+    "manxb": 5
+  }
+]

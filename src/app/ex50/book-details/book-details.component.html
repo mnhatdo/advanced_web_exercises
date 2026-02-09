@@ -1,0 +1,72 @@
+<div class="container">
+  <h1>Chi tiết sách</h1>
+
+  @if (loading) {
+    <div class="loading">Đang tải dữ liệu...</div>
+  } @else if (notFound) {
+    <div class="not-found">
+      <p>Không tìm thấy thông tin sách.</p>
+      <a routerLink="/ex50/books">← Quay lại danh sách</a>
+    </div>
+  } @else if (book) {
+    <div class="book-details">
+      <div class="detail-row">
+        <div class="detail-label">ID:</div>
+        <div class="detail-value">{{ book.id }}</div>
+      </div>
+
+      <div class="detail-row">
+        <div class="detail-label">Tên sách:</div>
+        <div class="detail-value book-title">{{ book.tensach }}</div>
+      </div>
+
+      <div class="detail-row">
+        <div class="detail-label">Giá bán:</div>
+        <div class="detail-value price">{{ formatPrice(book.giaban) }} VNĐ</div>
+      </div>
+
+      <div class="detail-row">
+        <div class="detail-label">Mô tả:</div>
+        <div class="detail-value description">{{ book.mota }}</div>
+      </div>
+
+      <div class="detail-row">
+        <div class="detail-label">Ảnh bìa:</div>
+        <div class="detail-value">
+          <span class="image-name">{{ book.anhbia }}</span>
+          @if (book.anhbia) {
+            <div class="image-preview">
+              <img [src]="'assets/images/books/' + book.anhbia" [alt]="book.tensach" 
+                   (error)="$any($event.target).style.display='none'" />
+            </div>
+          }
+        </div>
+      </div>
+
+      <div class="detail-row">
+        <div class="detail-label">Ngày cập nhật:</div>
+        <div class="detail-value">{{ formatDate(book.ngaycapnhat) }}</div>
+      </div>
+
+      <div class="detail-row">
+        <div class="detail-label">Số lượng tồn:</div>
+        <div class="detail-value">{{ book.soluongton }}</div>
+      </div>
+
+      <div class="detail-row">
+        <div class="detail-label">Mã CD:</div>
+        <div class="detail-value">{{ book.macd }}</div>
+      </div>
+
+      <div class="detail-row">
+        <div class="detail-label">Mã NXB:</div>
+        <div class="detail-value">{{ book.manxb }}</div>
+      </div>
+
+      <div class="actions">
+        <a [routerLink]="['/ex50/books/edit', book.id]" class="btn btn-edit">Chỉnh sửa</a>
+        <a routerLink="/ex50/books" class="btn btn-back">Quay lại danh sách</a>
+      </div>
+    </div>
+  }
+</div>
