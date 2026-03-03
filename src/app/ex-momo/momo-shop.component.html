@@ -1,0 +1,114 @@
+<!-- ===== ADIDAS STORE PAGE ===== -->
+<div class="retro-container momo-shop">
+
+  <!-- Page Header -->
+  <div class="shop-page-header">
+
+    <h1 class="section-title">Adidas Store</h1>
+    <p class="shop-subtitle retro-mono">Impossible Is Nothing — MoMo Payment</p>
+  </div>
+
+  <!-- Products Grid -->
+  <div class="products-grid">
+    <div class="retro-card product-card" *ngFor="let p of products">
+      <div class="discount-badge retro-mono">-{{ discountPercent(p) }}%</div>
+      <div class="product-img-wrap">
+        <img [src]="p.image" [alt]="p.name" class="product-img" loading="lazy" />
+      </div>
+      <div class="product-body">
+        <p class="product-brand retro-mono">{{ p.brand }}</p>
+        <h3 class="product-name">{{ p.name }}</h3>
+        <p class="product-desc">{{ p.description }}</p>
+        <div class="price-row">
+          <span class="price-now retro-mono">{{ formatPrice(p.price) }}</span>
+          <span class="price-was retro-mono">{{ formatPrice(p.originalPrice) }}</span>
+        </div>
+        <button class="retro-btn retro-btn-primary btn-full" (click)="openCheckout(p)">Mua ngay</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ===== CHECKOUT MODAL ===== -->
+<div class="modal-backdrop" *ngIf="showModal" (click)="closeModal()">
+  <div class="modal-window retro-card" (click)="$event.stopPropagation()">
+
+    <!-- Window titlebar -->
+    <div class="window-titlebar">
+      <div class="window-dots">
+        <span class="window-dot"></span>
+        <span class="window-dot"></span>
+      </div>
+      <span>checkout.form</span>
+      <button class="modal-close-btn" (click)="closeModal()">X</button>
+    </div>
+
+    <!-- Modal body -->
+    <div class="modal-body">
+
+      <h3 class="modal-title">Thong tin dat hang</h3>
+
+      <!-- Order summary -->
+      <div class="order-summary" *ngIf="selectedProduct">
+        <img [src]="selectedProduct.image" [alt]="selectedProduct.name" class="order-thumb" />
+        <div>
+          <p class="order-product-name">{{ selectedProduct.brand }} {{ selectedProduct.name }}</p>
+          <p class="order-product-price retro-mono">{{ formatPrice(selectedProduct.price) }} / doi</p>
+        </div>
+      </div>
+
+      <form class="order-form" (ngSubmit)="payWithMomo()">
+
+        <div class="retro-form-group">
+          <label>Ho ten *</label>
+          <input class="retro-input input-full" type="text"
+                 [(ngModel)]="orderForm.name" name="name"
+                 placeholder="Nguyen Van A" maxlength="50" />
+        </div>
+
+        <div class="retro-form-group">
+          <label>So dien thoai *</label>
+          <input class="retro-input input-full" type="tel"
+                 [(ngModel)]="orderForm.phone" name="phone"
+                 placeholder="09xxxxxxxx" maxlength="10" />
+        </div>
+
+        <div class="form-row-2">
+          <div class="retro-form-group">
+            <label>Size</label>
+            <select class="retro-input input-full"
+                    [(ngModel)]="orderForm.size" name="size">
+              <option *ngFor="let s of selectedProduct?.sizes" [value]="s">{{ s }}</option>
+            </select>
+          </div>
+          <div class="retro-form-group">
+            <label>So luong</label>
+            <input class="retro-input input-full" type="number"
+                   [(ngModel)]="orderForm.quantity" name="quantity"
+                   min="1" max="10" />
+          </div>
+        </div>
+
+        <div class="total-bar">
+          <span class="retro-mono">Tong cong</span>
+          <strong class="retro-mono total-amount">{{ formatPrice(totalPrice) }}</strong>
+        </div>
+
+        <div class="error-bar" *ngIf="errorMessage">
+          <span class="retro-mono">ERR:</span> {{ errorMessage }}
+        </div>
+
+        <button type="submit" class="retro-btn momo-pay-btn btn-full"
+                [disabled]="!isFormValid() || isLoading">
+          <span *ngIf="isLoading" class="retro-loading">Dang xu ly</span>
+          <span *ngIf="!isLoading">Thanh toan MoMo</span>
+        </button>
+
+        <p class="secure-note retro-mono">[ Thanh toan bao mat qua cong MoMo ]</p>
+
+      </form>
+    </div>
+
+  </div>
+</div>

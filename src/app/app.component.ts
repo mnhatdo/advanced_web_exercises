@@ -371,6 +371,7 @@ export class AppComponent {
   
   // Tab configuration - easy to add new exercises
   tabs: ExerciseTab[] = [
+    { path: '/ex-momo', label: 'Ex Momo Shop', shortLabel: 'ExMomo' },
     { path: '/ex13/service-product-image-event', label: 'Ex13 Product', shortLabel: 'Ex13' },
     { path: '/ex14/catalog', label: 'Ex14 Catalog', shortLabel: 'Ex14' },
     { path: '/ex18/customer-grouping', label: 'Ex18 Customers', shortLabel: 'Ex18' },

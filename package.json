@@ -25,6 +25,8 @@
     "@angular/build": "^21.0.4",
     "@angular/cli": "^21.0.4",
     "@angular/compiler-cli": "^21.0.0",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
     "typescript": "~5.9.2"
   }
 }
