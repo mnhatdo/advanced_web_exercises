@@ -28,9 +28,10 @@
 
             <!-- Star rating -->
             <div class="stars">
-              @for (i of stars(product.rating); track i) {
+              @for (i of stars(5); track i) {
                 <span [class]="i < product.rating ? 'star filled' : 'star'">★</span>
               }
+              <span class="rating-count">({{ product.ratingCount }})</span>
             </div>
 
             <p class="product-price">{{ formatPrice(product.price) }}</p>

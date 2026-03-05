@@ -48,8 +48,9 @@ const productSchema = new mongoose.Schema({
     price:       { type: Number, required: true },
     image:       { type: String, default: '' },
     description: { type: String, default: '' },
-    category:    { type: String, default: 'Ring' },
-    rating:      { type: Number, default: 0 }
+    category:    { type: String, default: 'General' },
+    rating:      { type: Number, default: 0 },
+    ratingCount: { type: Number, default: 0 }
 });
 const Product = mongoose.model('Product', productSchema);
 

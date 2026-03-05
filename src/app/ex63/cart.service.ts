@@ -10,6 +10,7 @@ export interface Product {
   description: string;
   category: string;
   rating: number;
+  ratingCount: number;
 }
 
 export interface CartItem {

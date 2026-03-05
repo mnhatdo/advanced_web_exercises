@@ -98,9 +98,10 @@
 }
 .product-name:hover { text-decoration: underline; }
 
-.stars { margin-bottom: 6px; }
+.stars { margin-bottom: 6px; display: flex; align-items: center; gap: 2px; }
 .star { color: #ccc; font-size: 0.85rem; }
 .star.filled { color: #f5a623; }
+.rating-count { font-size: 0.75rem; color: #888; margin-left: 4px; }
 
 .product-price {
   font-size: 0.95rem;
