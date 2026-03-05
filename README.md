@@ -1,277 +1,191 @@
-# Advanced Web Exercises
+# Advanced Business Web Development – Exercises
 
-A collection of advanced Angular exercises demonstrating modern web development practices with a retro-inspired UI design.
-
-## 🎯 Exercises Overview
-
-This repository contains hands-on Angular exercises covering various advanced topics:
-
-### Ex13: Product Service with Images and Events
-- Service-based architecture
-- Image handling
-- Event-driven components
-- Product detail views
-
-### Ex14: Catalog Service
-- Category-based product organization
-- Service integration
-- Dynamic data rendering
-
-### Ex18: Customer Grouping
-- Data filtering and grouping
-- Customer management interface
-- Advanced component patterns
-
-### Ex50: RESTful API Book Management ⭐
-- Complete CRUD operations (Create, Read, Update, Delete)
-- RESTful API simulation with HttpClient
-- Book information management system
-- Image upload handling
-- Form validation and user experience
-- Features:
-  - ✅ View all books in a styled table
-  - ✅ Create new book entries
-  - ✅ Edit existing book information
-  - ✅ View detailed book information
-  - ✅ Delete books with confirmation
-  - ✅ Image preview and upload
-
-## 🎨 Design System
-
-The application features a **retro 2000s-inspired design system** with:
-
-- **Minimalist black & white color scheme**
-- **Bold typography** using Space Grotesk and Space Mono fonts
-- **Hard-edge shadows** and thick borders
-- **Dotted halftone background patterns**
-- **Window-style interfaces** with classic title bars
-- **Interactive hover effects** and smooth transitions
-
-### Design Components
-- Retro cards with shadow effects
-- Styled buttons with press animations
-- Clean form inputs with focus states
-- Professional data tables
-- Tab-based navigation system
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Node.js (v18 or higher)
-- Angular CLI (v21 or higher)
-- npm or yarn package manager
-
-### Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/mnhatdo/advanced_web_exercises.git
-   cd advanced_web_exercises
-   ```
-
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
-
-3. **Start the development server**
-   ```bash
-   npm start
-   ```
-
-4. **Open your browser**
-   Navigate to `http://localhost:4200`
-
-## 🏗️ Project Structure
-
-```
-src/
-├── app/
-│   ├── ex13/                   # Product Service Exercise
-│   ├── ex14/                   # Catalog Service Exercise
-│   ├── ex18/                   # Customer Grouping Exercise
-│   ├── ex50/                   # Book Management (RESTful API)
-│   │   ├── book.service.ts     # RESTful service with CRUD operations
-│   │   ├── book-list/          # List all books
-│   │   ├── book-form/          # Create/Edit books
-│   │   └── book-details/       # View book details
-│   ├── app.component.ts        # Main app with tab navigation
-│   ├── app.config.ts           # App configuration
-│   └── app.routes.ts           # Routing configuration
-├── styles.css                  # Global retro design system
-└── public/
-    └── assets/
-        └── data/
-            └── books.json      # Sample book data
-```
-
-## 🛠️ Technologies Used
-
-- **Angular 21** - Modern web framework
-- **TypeScript** - Type-safe JavaScript
-- **RxJS** - Reactive programming
-- **Angular Router** - Navigation and routing
-- **HttpClient** - API communication
-- **CSS3** - Modern styling with custom properties
-- **Google Fonts** - Typography (Space Grotesk, Space Mono)
-
-## 📱 Features
-
-### Tab-based Navigation
-Easy-to-extend tab system for adding new exercises:
-```typescript
-tabs: ExerciseTab[] = [
-  { path: '/ex13/service-product-image-event', label: 'Ex13 Product', shortLabel: 'Ex13' },
-  { path: '/ex14/catalog', label: 'Ex14 Catalog', shortLabel: 'Ex14' },
-  { path: '/ex18/customer-grouping', label: 'Ex18 Customers', shortLabel: 'Ex18' },
-  { path: '/ex50/books', label: 'Ex50 Books', shortLabel: 'Ex50' }
-];
-```
-
-### RESTful API Simulation
-The Book Management exercise simulates a complete RESTful API with:
-- `GET /books` - Retrieve all books
-- `POST /books` - Create new book
-- `PUT /books/:id` - Update existing book
-- `DELETE /books/:id` - Delete book
-
-## 🎯 Learning Objectives
-
-- **Component Architecture** - Building scalable Angular components
-- **Service Patterns** - Implementing business logic in services
-- **HTTP Communication** - Working with APIs and data
-- **Routing & Navigation** - Multi-page application structure
-- **Form Handling** - Template-driven and reactive forms
-- **State Management** - Managing application state
-- **UI/UX Design** - Creating engaging user interfaces
-- **TypeScript** - Advanced typing and interfaces
-
-## 📝 Exercise Guidelines
-
-Each exercise is designed to be:
-- **Hands-on** - Learn by building real features
-- **Progressive** - Build upon previous concepts
-- **Practical** - Solve real-world problems
-- **Modern** - Use current Angular best practices
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## 📄 License
-
-This project is licensed under the MIT License.
-
-## 👨‍💻 Author
-
-**Do Minh Nhat**
-- GitHub: [@mnhatdo](https://github.com/mnhatdo)
+A collection of Angular + Node.js exercises for the Advanced Business Web Development course.  
+UI: Angular 21 (standalone components, retro-inspired design).  
+Backend: Express.js + MongoDB (Mongoose) – one server file per exercise.
 
 ---
 
-*Built with Angular 21 and modern web technologies* 🚀
-├── angular.json                    # Angular configuration
-├── package.json                    # Dependencies for all exercises
-├── tsconfig.json                   # TypeScript configuration
-├── node_modules/                   # Shared dependencies
-├── public/                         # Shared static assets
+## Project Structure
+
+```
+advanced_web_exercises/
+│
+├── server/                         # Node.js / Express back-end servers
+│   ├── momo-server.js              # ExMomo  – MoMo payment gateway (port 3030)
+│   ├── ex60-server.js              # Ex60    – Cookies demo (port 3002)
+│   ├── ex61-server.js              # Ex61    – Cookie login (port 3003)
+│   ├── ex62-server.js              # Ex62    – Session demo (port 3004)
+│   ├── ex63-server.js              # Ex63    – Session shopping cart (port 3005)
+│   └── ex63-seed.js                # Ex63    – Scrape & seed products from fakestoreapi
+│
+├── src/                            # Angular 21 application (single SPA)
+│   ├── index.html
+│   ├── main.ts
+│   ├── styles.css
+│   └── app/
+│       ├── app.component.ts        # Root shell + tab navigation
+│       ├── app.config.ts
+│       ├── app.routes.ts           # Centralised routing
+│       ├── customer-grouping/      # Ex18 – Customer grouping
+│       ├── ex-momo/                # ExMomo – MoMo payment shop
+│       ├── ex13/                   # Ex13 – Product service + images + events
+│       ├── ex14/                   # Ex14 – Catalog service
+│       ├── ex50/                   # Ex50 – Book CRUD (RESTful API)
+│       ├── ex61/                   # Ex61 – Cookie login form
+│       └── ex63/                   # Ex63 – Session shopping cart
+│
+├── public/                         # Static assets served by Angular
 │   └── assets/
-│       ├── images/                 # Product images (ex13, ex14)
-│       ├── avatars/                # Customer avatars (ex18)
-│       └── data/                   # JSON data files (ex18)
-└── src/
-    ├── index.html                  # Single entry point
-    ├── main.ts                     # Single bootstrap file
-    ├── styles.css                  # Global styles
-    └── app/
-        ├── app.component.ts        # Root component with navigation
-        ├── app.config.ts           # Application configuration
-        ├── app.routes.ts           # Centralized routing
-        ├── ex13/                   # Exercise 13 feature folder
-        │   ├── product.service.ts
-        │   ├── service-product-image-event/
-        │   └── service-product-image-event-detail/
-        ├── ex14/                   # Exercise 14 feature folder
-        │   ├── catalog.service.ts
-        │   └── ex14-catalog/
-        └── customer-grouping/      # Exercise 18 feature folder
-            └── customer-grouping.component.*
+│       ├── avatars/
+│       ├── images/
+│       └── data/
+│           ├── books.json
+│           └── customers.json
+│
+├── docs/                           # Architecture & migration notes
+│   ├── ARCHITECTURE_VALIDATION.md
+│   └── MIGRATION_MAP.md
+│
+├── angular.json
+├── package.json                    # Shared deps for Angular + all servers
+├── tsconfig.json
+└── tsconfig.app.json
 ```
 
-## Exercises
+---
 
-### Ex13: Product Service with Images and Events
-- **Routes:** `/ex13/service-product-image-event`, `/ex13/service-product-image-event/:id`
-- **Features:** Product listing, product detail view, navigation events
-- **Service:** ProductService with 3 products (Coca, Pepsi, Sting)
+## Exercises Overview
 
-### Ex14: Catalog Service
-- **Route:** `/ex14/catalog`
-- **Features:** Category-based product display
-- **Service:** CatalogService with 2 categories (Nước ngọt, Bia)
+| # | Exercise | Angular route | Server | Port | Key topic |
+|---|---|---|---|---|---|
+| Ex13 | Product Service + Images + Events | `/ex13/service-product-image-event` | – | – | Services, events |
+| Ex14 | Catalog Service | `/ex14/catalog` | – | – | Category service |
+| Ex18 | Customer Grouping | `/ex18/customer-grouping` | – | – | HTTP + grouping |
+| Ex50 | Book Management (CRUD) | `/ex50/books` | – | – | RESTful simulation |
+| ExMomo | MoMo Payment Shop | `/ex-momo` | `momo-server.js` | 3030 | Payment gateway |
+| Ex60 | Cookies Programming | – | `ex60-server.js` | 3002 | cookie-parser |
+| Ex61 | Cookie Login | `/ex61/login` | `ex61-server.js` | 3003 | Cookie + MongoDB auth |
+| Ex62 | Session Programming | – | `ex62-server.js` | 3004 | express-session |
+| Ex63 | Session Shopping Cart | `/ex63/products` `/ex63/cart` | `ex63-server.js` | 3005 | Session cart + MongoDB |
 
-### Ex18: Customer Grouping
-- **Route:** `/ex18/customer-grouping` (default)
-- **Features:** Customer grouping by type, HTTP data loading
-- **Data Source:** `assets/data/customers.json`
+---
 
-## Development
+## Getting Started
 
-### Install Dependencies
+### Prerequisites
+
+- Node.js >= 18
+- Angular CLI >= 21
+- MongoDB running locally on `mongodb://localhost:27017`
+
+### Install dependencies
+
 ```bash
 npm install
 ```
 
-### Run Development Server
+### Run Angular dev server
+
 ```bash
 npm start
-# Navigate to http://localhost:4200/
+# → http://localhost:4200
 ```
 
-### Build for Production
+### Run a back-end server
+
+Each exercise has its own server file in `server/`:
+
 ```bash
-npm run build
+node server/ex60-server.js   # Cookies demo      → :3002
+node server/ex61-server.js   # Cookie login      → :3003
+node server/ex62-server.js   # Session demo      → :3004
+node server/ex63-server.js   # Shopping cart     → :3005
+node server/momo-server.js   # MoMo payment      → :3030
 ```
 
-### Run Tests
+### Seed shopping cart products (Ex63)
+
+Scrapes real product data from fakestoreapi.com into MongoDB:
+
 ```bash
-npm test
+node server/ex63-seed.js
 ```
 
-## Architecture Rules
+---
 
-### ✅ Allowed
-- Create new exercise folders under `src/app/`
-- Add routes to `app.routes.ts` with unique prefixes
-- Create services within exercise folders
-- Share assets via `public/assets/`
+## Exercise Details
 
-### ❌ Forbidden
-- Multiple `angular.json` files
-- Multiple `main.ts` or bootstrap files
-- Nested Angular apps inside exercises
-- Exercise-level `node_modules` or `package.json`
+### Ex60 – Cookies Programming (port 3002)
 
-## Adding New Exercises
+Demonstrates cookie-parser basics.
 
-1. Create a new folder: `src/app/ex{number}/`
-2. Create components and services inside
-3. Add routes to `app.routes.ts` with prefix: `/ex{number}/...`
-4. Update navigation in `app.component.ts`
-5. Place shared assets in `public/assets/`
+| Endpoint | Description |
+|---|---|
+| `GET /create-cookie` | Set username, password, account cookies + timed cookies |
+| `GET /read-cookie` | Read cookies with null-check guard |
+| `GET /clear-cookie` | Clear the account cookie |
 
-## Route Prefixes
+### Ex61 – Cookie Login (port 3003)
 
-Each exercise uses a unique route prefix to prevent conflicts:
-- **Ex13:** `/ex13/*`
-- **Ex14:** `/ex14/*`
-- **Ex18:** `/ex18/*`
+Stores login credentials in a cookie (7-day expiry). Pre-fills the login form on next visit.
 
-## Migration Notes
+| Endpoint | Description |
+|---|---|
+| `POST /ex61/login` | Authenticate against FashionData.User, set cookie |
+| `GET /ex61/read-cookie` | Return saved cookie info for pre-fill |
+| `POST /ex61/logout` | Clear login cookies |
 
-This workspace was consolidated from multiple separate Angular apps:
-- `ex18/` → Root Angular app
-- `e14/my-exer/` → Migrated to `src/app/ex14/`
-- `e14/my-app/` → Removed (unused)
+Sample accounts: `tranduythanh/123456` · `admin/admin@123` · `student/student1`
 
-All exercises now run under a single Angular application with shared dependencies and unified routing.
+### Ex62 – Session Programming (port 3004)
+
+Demonstrates express-session basics.
+
+| Endpoint | Description |
+|---|---|
+| `GET /contact` | Visit counter stored in session |
+| `GET /set-user` | Save a JsonObject to session |
+| `GET /get-user` | Read the JsonObject back |
+| `GET /reset-session` | Destroy the session |
+| `GET /session-info` | Inspect full session (debug) |
+
+### Ex63 – Session Shopping Cart (port 3005)
+
+Session-based cart; product data seeded from fakestoreapi.com.
+
+| Endpoint | Description |
+|---|---|
+| `GET /ex63/products` | List all products from FashionData.Product |
+| `POST /ex63/cart/add` | Add product to session cart (auto-increment qty) |
+| `GET /ex63/cart` | View current session cart |
+| `PUT /ex63/cart/update` | Update qty (qty <= 0 removes item) |
+| `DELETE /ex63/cart/remove/:id` | Remove one item |
+| `DELETE /ex63/cart/clear` | Empty the cart |
+
+---
+
+## MongoDB Collections (FashionData)
+
+| Collection | Used by | Fields |
+|---|---|---|
+| `User` | Ex61 | username, password |
+| `Product` | Ex63 | name, price, image, description, category, rating, ratingCount |
+
+---
+
+## Technologies
+
+| Layer | Stack |
+|---|---|
+| Frontend | Angular 21, TypeScript, RxJS, Angular Router, HttpClient |
+| Backend | Node.js, Express 5, cors, cookie-parser, express-session |
+| Database | MongoDB, Mongoose |
+| Styling | CSS3, Space Grotesk / Space Mono (Google Fonts) |
+| Data | fakestoreapi.com (product scraping) |
+
+---
+
+## Author
+
+**Do Minh Nhat** · https://github.com/mnhatdo
