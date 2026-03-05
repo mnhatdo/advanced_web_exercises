@@ -1,0 +1,55 @@
+<div class="container mt-4">
+  <div class="card" style="width: 22rem;">
+    <div class="card-header">Login System</div>
+    <div class="card-body">
+      <form (ngSubmit)="onLogin()">
+
+        <div class="mb-3">
+          <label for="name-reg" class="form-label">User Name:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name-reg"
+            name="name"
+            [(ngModel)]="username"
+            required />
+        </div>
+
+        <div class="mb-3">
+          <label for="password-reg" class="form-label">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="password-reg"
+            name="password"
+            [(ngModel)]="password"
+            required />
+        </div>
+
+        <div class="d-flex gap-2">
+          <button type="submit" class="btn btn-primary" [disabled]="loading">
+            {{ loading ? 'Logging in...' : 'Login' }}
+          </button>
+          <button type="button" class="btn btn-outline-secondary" (click)="onLogout()" *ngIf="loggedIn">
+            Logout
+          </button>
+        </div>
+
+      </form>
+
+      <!-- Status message -->
+      @if (message) {
+        <div class="alert mt-3" [ngClass]="success ? 'alert-success' : 'alert-danger'">
+          {{ message }}
+        </div>
+      }
+
+      <!-- Cookie info display -->
+      @if (cookieUsername) {
+        <div class="alert alert-info mt-3">
+          <small><strong>Cookie saved:</strong> {{ cookieUsername }}</small>
+        </div>
+      }
+    </div>
+  </div>
+</div>

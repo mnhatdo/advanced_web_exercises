@@ -375,6 +375,7 @@ export class AppComponent {
     { path: '/ex13/service-product-image-event', label: 'Ex13 Product', shortLabel: 'Ex13' },
     { path: '/ex14/catalog', label: 'Ex14 Catalog', shortLabel: 'Ex14' },
     { path: '/ex18/customer-grouping', label: 'Ex18 Customers', shortLabel: 'Ex18' },
-    { path: '/ex50/books', label: 'Ex50 Books', shortLabel: 'Ex50' }
+    { path: '/ex50/books', label: 'Ex50 Books', shortLabel: 'Ex50' },
+    { path: '/ex61/login', label: 'Ex61 Login', shortLabel: 'Ex61' }
   ];
 }
