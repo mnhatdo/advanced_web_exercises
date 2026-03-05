@@ -9,6 +9,8 @@ import { BookDetailsComponent } from './ex50/book-details/book-details.component
 import { MomoShopComponent } from './ex-momo/momo-shop.component';
 import { MomoResultComponent } from './ex-momo/momo-result.component';
 import { LoginComponent } from './ex61/login/login.component';
+import { ProductListComponent } from './ex63/product-list/product-list.component';
+import { CartViewComponent } from './ex63/cart-view/cart-view.component';
 
 export const routes: Routes = [
   // Ex-Momo - Adidas Shop with MoMo Payment
@@ -33,5 +35,9 @@ export const routes: Routes = [
   { path: 'ex50/books/details/:id', component: BookDetailsComponent },
 
   // Ex61 - Cookies: Save Login Information
-  { path: 'ex61/login', component: LoginComponent }
+  { path: 'ex61/login', component: LoginComponent },
+
+  // Ex63 - Session: Shopping Cart
+  { path: 'ex63/products', component: ProductListComponent },
+  { path: 'ex63/cart',     component: CartViewComponent }
 ];
