@@ -11,6 +11,11 @@ import { MomoResultComponent } from './ex-momo/momo-result.component';
 import { LoginComponent } from './ex61/login/login.component';
 import { ProductListComponent } from './ex63/product-list/product-list.component';
 import { CartViewComponent } from './ex63/cart-view/cart-view.component';
+import { FashionAdminListComponent } from './ex58/admin/fashion-admin-list/fashion-admin-list.component';
+import { FashionAdminFormComponent } from './ex58/admin/fashion-admin-form/fashion-admin-form.component';
+import { FashionAdminDetailComponent } from './ex58/admin/fashion-admin-detail/fashion-admin-detail.component';
+import { FashionClientListComponent } from './ex58/client/fashion-client-list/fashion-client-list.component';
+import { FashionClientDetailComponent } from './ex58/client/fashion-client-detail/fashion-client-detail.component';
 
 export const routes: Routes = [
   // Ex-Momo - Adidas Shop with MoMo Payment
@@ -39,5 +44,15 @@ export const routes: Routes = [
 
   // Ex63 - Session: Shopping Cart
   { path: 'ex63/products', component: ProductListComponent },
-  { path: 'ex63/cart',     component: CartViewComponent }
+  { path: 'ex63/cart',     component: CartViewComponent },
+
+  // Ex58 - Fashion Website Admin (admin-fashion module, port 4001)
+  { path: 'ex58/admin',              component: FashionAdminListComponent },
+  { path: 'ex58/admin/create',       component: FashionAdminFormComponent },
+  { path: 'ex58/admin/edit/:id',     component: FashionAdminFormComponent },
+  { path: 'ex58/admin/detail/:id',   component: FashionAdminDetailComponent },
+
+  // Ex58 - Fashion Website Client (client-fashion module, port 4002)
+  { path: 'ex58/client',             component: FashionClientListComponent },
+  { path: 'ex58/client/:id',         component: FashionClientDetailComponent }
 ];

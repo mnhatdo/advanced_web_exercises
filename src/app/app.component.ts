@@ -377,6 +377,8 @@ export class AppComponent {
     { path: '/ex18/customer-grouping', label: 'Ex18 Customers', shortLabel: 'Ex18' },
     { path: '/ex50/books', label: 'Ex50 Books', shortLabel: 'Ex50' },
     { path: '/ex61/login',    label: 'Ex61 Login',  shortLabel: 'Ex61' },
-    { path: '/ex63/products', label: 'Ex63 Shop',   shortLabel: 'Ex63' }
+    { path: '/ex63/products',  label: 'Ex63 Shop',         shortLabel: 'Ex63' },
+    { path: '/ex58/admin',     label: 'Ex58 Fashion Admin', shortLabel: 'Ex58A' },
+    { path: '/ex58/client',    label: 'Ex58 Fashion Site',  shortLabel: 'Ex58C' }
   ];
 }
